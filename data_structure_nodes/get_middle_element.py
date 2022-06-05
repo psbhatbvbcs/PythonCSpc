@@ -10,7 +10,7 @@ def getMiddleElement(head):
     tick = False
     while fastRunner:
         fastRunner = fastRunner.nextNode
-        if tick == True:
+        if tick is True:
             slowRunner = slowRunner.nextNode
         tick = not tick
     return slowRunner.value

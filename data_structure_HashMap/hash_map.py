@@ -76,7 +76,7 @@ class HashMap:
         array_index = self.compressor(self.hash(key))
         possible_pair = self.array[array_index]
 
-        if possible_pair == None:
+        if possible_pair is None:
             return print("\"{0}\" is not in this hash map".format(key))
 
         if possible_pair[0] == key:
@@ -89,7 +89,7 @@ class HashMap:
             new_array_index = self.compressor(self.hash(key, del_collisions))
             possible_pair = self.array[new_array_index]
 
-            if possible_pair == None:
+            if possible_pair is None:
                 return print("\"{0}\" is not in this hash map".format(key))
 
             if possible_pair[0] == key:
